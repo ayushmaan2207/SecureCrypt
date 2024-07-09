@@ -22,20 +22,22 @@ const Encrypt = () => {
       }
       arr = arr.join(" ");
       let ele = document.querySelector(".create");
-      const elet= document.querySelector(".created");
+      const elet = document.querySelector(".created");
       ele.classList.remove("hide");
       elet.textContent = `${arr}`;
-
     }
   }
   function submitHandler(event) {
     event.preventDefault();
     setEnncrpt("");
   }
-  function copyHandler(){
-    const elet= document.querySelector(".created").textContent;
+  function copyHandler() {
+    const elet = document.querySelector(".created").textContent;
     navigator.clipboard.writeText(elet);
-    document.alert("hogya copy");
+    document.querySelector(".copy").classList.add("act");
+    setTimeout(() => {
+      document.querySelector(".copy").classList.remove("act");
+    }, 1000);
   }
 
   return (
@@ -76,7 +78,10 @@ const Encrypt = () => {
           </div>
           <div className="create hide">
             <div className="created"></div>
-            <PiCopySimpleBold className="crbtn" onClick={copyHandler}/>
+            <div className="crbtn" onClick={copyHandler}>
+              <PiCopySimpleBold />
+            </div>
+            <div className="copy">Copied!</div>
           </div>
         </form>
       </div>

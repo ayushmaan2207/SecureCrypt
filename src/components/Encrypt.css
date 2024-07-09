@@ -171,7 +171,7 @@
     height: 12vh;
   }
   100%{
-    width: 888px;
+    width: 57.8vw;
   }
 }
 .dece::placeholder {
@@ -228,12 +228,15 @@ textarea:focus {
   align-items: center;
   background-color: #fff;
 }
-.crbtn{
+.crbtn {
   color: #ffffff;
   font-size: 20px;
+  cursor: pointer;
+  z-index: 999;
 }
-.crbtn:hover{
-  color: rgba(7, 214, 255, 0.721);
+
+.crbtn:hover {
+  color: rgb(7, 214, 255);
 }
 .created {
   width: fit-content;
@@ -247,4 +250,20 @@ textarea:focus {
   padding: 15px;
   font-size: 30px;
   color: white;
+}
+
+.copy{
+  background-color: #fff;
+  border-radius: 15px;
+  font-size: 10px;
+  padding: 5px;
+  color: black;
+  filter: contrast(100%);
+  font-weight: 600;
+  margin-left: -10px;
+  align-self: center;
+  display: none;
+}
+.copy.act{
+  display: block;
 }

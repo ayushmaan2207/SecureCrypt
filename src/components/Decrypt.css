@@ -171,7 +171,7 @@
     height: 12vh;
   }
   100%{
-    width: 888px;
+    width: 57.8vw;
   }
 }
 .encd::placeholder {
@@ -227,12 +227,13 @@ textarea:focus {
     filter: opacity(100%);
   }
 }
-.bkbtn svg{
+.bkbtn {
+  z-index: inherit;
   color: white;
   padding: 8px;
 
 }
-.bkbtn svg:hover{
+.bkbtn :hover{
   color: #00b0cb;
 }
 .decd {
