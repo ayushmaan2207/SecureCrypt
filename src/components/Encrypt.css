@@ -267,3 +267,24 @@ textarea:focus {
 .copy.act{
   display: block;
 }
+
+@media screen and (max-width:480px ){
+  .tope{
+    font-size: 14vw;
+    padding:0vw 7vw;
+  }
+  .bottome{
+    font-size: 5vw;
+    padding:2vw 7vw;
+  }
+  .logoe{
+    display: none;
+  }
+  .conte{
+    margin-bottom: 0;
+  }
+  .btnse{
+    width: 80%;
+    transform: scale(0.8);
+  }
+}
