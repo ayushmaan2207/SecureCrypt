@@ -269,3 +269,29 @@ textarea:focus {
 .decd:hover {
   background-color: rgba(7, 214, 255, 0.721);
 }
+
+@media screen and (max-width:480px ){
+  .topd{
+    font-size: 14vw;
+    padding:0vw 7vw;
+    animation: fade-up1 2s ;
+  }
+  .bottomd{
+    font-size: 5vw;
+    padding:2vw 7vw;
+    animation: fade-up1 2s ;
+  }
+  .logod{
+    display: none;
+  }
+  .contd{
+    margin-bottom: 0;
+    animation: fade-up1 2s ;
+  }
+  .btnsd{
+    width: 80%;
+    transform: scale(0.8);
+    animation: fade-up1 2s ;
+  }
+ 
+}
