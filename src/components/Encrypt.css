@@ -287,4 +287,7 @@ textarea:focus {
     width: 80%;
     transform: scale(0.8);
   }
+  .copy.act{
+    display: none;
+  }
 }
