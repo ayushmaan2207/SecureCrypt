@@ -166,3 +166,20 @@
   padding: 6px;
   background-color: #01dcfe0f;
 }
+
+
+
+@media screen and (max-width:480px ){
+  .logo{
+    height: 25vh;
+    width: 25vh;
+  }
+  .top{
+    font-size: 60px;
+  }
+  .bottom{
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+}
