@@ -170,18 +170,18 @@
 
 
 @media screen and (max-width:480px ){
-  .App{
-    padding-bottom: 10%;
+  .cont{
+    margin-bottom: 10vw;
   }
   .logo{
-    height: 25vh;
-    width: 25vh;
+    height: 22vh;
+    width: 22vh;
   }
   .top{
     font-size: 14vw;
   }
   .bottom{
-    font-size: 100%;
+    font-size: 4vw;
     padding: 2% 12%;
     text-align: center;
   }
