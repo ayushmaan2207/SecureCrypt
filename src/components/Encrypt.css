@@ -272,24 +272,24 @@ textarea:focus {
   .tope{
     font-size: 14vw;
     padding:0vw 7vw;
-    animation: fade-up1 2.5s ;
+    animation: fade-up1 2s ;
   }
   .bottome{
     font-size: 5vw;
     padding:2vw 7vw;
-    animation: fade-up1 2.5s ;
+    animation: fade-up1 2s ;
   }
   .logoe{
     display: none;
   }
   .conte{
     margin-bottom: 0;
-    animation: fade-up1 2.5s ;
+    animation: fade-up1 2s ;
   }
   .btnse{
     width: 80%;
     transform: scale(0.8);
-    animation: fade-up1 2.5s ;
+    animation: fade-up1 2s ;
   }
   .copy.act{
     display: none;
