@@ -1,6 +1,7 @@
 import "./Encrypt.css";
 import React, { useState } from "react";
 import { TiArrowBackOutline } from "react-icons/ti";
+import { PiCopySimpleBold } from "react-icons/pi";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 const Encrypt = () => {
@@ -20,24 +21,26 @@ const Encrypt = () => {
         }
       }
       arr = arr.join(" ");
-      console.log(arr);
-      let ele = document.querySelector(".cr");
-      ele.classList.add("created");
-      ele.textContent = `${arr}`;
+      let ele = document.querySelector(".create");
+      const elet= document.querySelector(".created");
+      ele.classList.remove("hide");
+      elet.textContent = `${arr}`;
+
     }
   }
   function submitHandler(event) {
     event.preventDefault();
     setEnncrpt("");
   }
+  function copyHandler(){
+    const elet= document.querySelector(".created").textContent;
+    navigator.clipboard.writeText(elet);
+    document.alert("hogya copy");
+  }
+
   return (
     <>
       <div className="Encrypt">
-        <Link to="/">
-          <button className="bkbtn">
-            <TiArrowBackOutline />
-          </button>
-        </Link>
         <div className="clr1"></div>
         <div className="clr2"></div>
         <div className="conte">
@@ -49,7 +52,8 @@ const Encrypt = () => {
               Welcome to <span>EnCrypt</span>,
             </div>
             <div className="bottome">
-              Safeguard your text messages with our advanced encryption solutions.
+              Safeguard your text messages with our advanced encryption
+              solutions.
             </div>
           </div>
         </div>
@@ -60,10 +64,20 @@ const Encrypt = () => {
             className="dece"
             placeholder="Write the text you want to Encrypt."
           ></textarea>
-          <button onClick={clickHandler} className="ence">
-            Encrypt
-          </button>
-          <div className="cr"></div>
+          <div className="butd">
+            <Link to="/">
+              <button className="bkbtn">
+                <TiArrowBackOutline value={{ className: "icons" }} />
+              </button>
+            </Link>
+            <button onClick={clickHandler} className="ence">
+              Encrypt
+            </button>
+          </div>
+          <div className="create hide">
+            <div className="created"></div>
+            <PiCopySimpleBold className="crbtn" onClick={copyHandler}/>
+          </div>
         </form>
       </div>
     </>

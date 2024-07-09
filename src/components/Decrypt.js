@@ -14,13 +14,13 @@ const Decrypt = () => {
       let arr = decrpt.split(" ");
       for (let i = 0; i < arr.length; i++) {
         if (arr[i].length > 3) {
-          arr[i] = arr[i][arr[i].length - 4] + arr[i].slice(0, arr[i].length - 4);
+          arr[i] =
+            arr[i][arr[i].length - 4] + arr[i].slice(0, arr[i].length - 4);
         } else {
           arr[i] = arr[i][0];
         }
       }
       arr = arr.join(" ");
-      console.log(arr);
       let ele = document.querySelector(".cr");
       ele.classList.add("created");
       ele.textContent = `${arr}`;
@@ -33,11 +33,6 @@ const Decrypt = () => {
   return (
     <>
       <div className="Decrypt">
-        <Link to="/">
-          <button className="bkbtn">
-            <TiArrowBackOutline value={{ className: "icons" }} />
-          </button>
-        </Link>
         <div className="clr1"></div>
         <div className="clr2"></div>
         <div className="contd">
@@ -49,7 +44,8 @@ const Decrypt = () => {
               Welcome to <span>DeCrypt</span>,
             </div>
             <div className="bottomd">
-              Restore your data's readability efficiently with our advanced decryption solutions.
+              Restore your data's readability efficiently with our advanced
+              decryption solutions.
             </div>
           </div>
         </div>
@@ -60,9 +56,16 @@ const Decrypt = () => {
             className="encd"
             placeholder="Write the text you want to Decrypt."
           ></textarea>
-          <button onClick={clickHandler} className="decd">
-            Decrypt
-          </button>
+          <div className="butd">
+            <Link to="/">
+              <button className="bkbtn">
+                <TiArrowBackOutline value={{ className: "icons" }} />
+              </button>
+            </Link>
+            <button onClick={clickHandler} className="decd">
+              Decrypt
+            </button>
+          </div>
           <div className="cr"></div>
         </form>
       </div>

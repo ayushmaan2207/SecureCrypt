@@ -21,38 +21,7 @@
     #0d0a31 94.2%
   );
 }
-.bkbtn{
-  position: absolute;
-  height: 53px;
-  width: 53px;
-  border-radius: 15px;
-  background-color: transparent;
-  border: none;
-  transform: translate(14vw,64.3vh);
-  font-size: 31px;
-  justify-content: center;
-  color: white;
-  animation: appear 4s;
-}
-@keyframes appear {
-  0%{
-    filter: opacity(0%);
-  }
-  50%{
-    filter: opacity(0%);
-  }
-  100%{
-    filter: opacity(100%);
-  }
-}
-.bkbtn svg{
-  color: white;
-  padding: 8px;
 
-}
-.bkbtn svg:hover{
-  color: #00b0cb;
-}
 
 .clr1 {
   position: absolute;
@@ -232,9 +201,9 @@ textarea:focus {
 @keyframes decda {
   0% {
     filter: blur(2px);
-    transform: translate(-10.5vw,-11vh);
+    transform: translate(-15px,1px);
     width: 273px;
-    height: 21vh;
+    height:70px;
     background-color: transparent;
     border: 2px solid #01dbfe;
   }
@@ -246,7 +215,26 @@ textarea:focus {
 .ence:hover {
   background-color: rgba(7, 214, 255, 0.721);
 }
-
+.create{
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.create.hide{
+  margin-top: 20px;
+  display: none;
+  gap: 15px;
+  align-items: center;
+  background-color: #fff;
+}
+.crbtn{
+  color: #ffffff;
+  font-size: 20px;
+}
+.crbtn:hover{
+  color: rgba(7, 214, 255, 0.721);
+}
 .created {
   width: fit-content;
   max-height: 100px;
@@ -256,9 +244,7 @@ textarea:focus {
   text-align: start;
   background-color: #01dcfe26;
   border-radius: 15px;
-  margin-top: 20px;
   padding: 15px;
   font-size: 30px;
   color: white;
-  z-index: 100;
 }
