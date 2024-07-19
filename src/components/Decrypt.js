@@ -10,19 +10,40 @@ const Decrypt = () => {
     setDecrpt(event.target.value);
   }
   function clickHandler() {
+    let err= false;
     if (decrpt.length > 0) {
       let arr = decrpt.split(" ");
       for (let i = 0; i < arr.length; i++) {
         if (arr[i].length > 3) {
-          arr[i] =
-            arr[i][arr[i].length - 4] + arr[i].slice(0, arr[i].length - 4);
+          if(arr[i].slice(arr[i].length-3,arr[i].length)==="erb"){
+            arr[i] = arr[i][arr[i].length - 4] + arr[i].slice(0, arr[i].length - 4);
+            err= false;
+          }
+          else{
+            arr=["Incorrect message","!!!"];
+            err= true;
+            break;
+          }
         } else {
-          arr[i] = arr[i][0];
+          if(arr[i].slice(arr[i].length-2,arr[i].length)==="ja"){
+            arr[i] = arr[i][0];
+            err= false;
+          }
+          else{
+            arr=["Incorrect message","!!!"];
+            err= true;
+            break;
+          }
         }
       }
       arr = arr.join(" ");
       let ele = document.querySelector(".cr");
-      ele.classList.add("created");
+      if(err){
+        ele.classList.add("errorCreated");
+      }
+      else{
+        ele.classList.add("created");
+      }
       ele.textContent = `${arr}`;
     }
   }

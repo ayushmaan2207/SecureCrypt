@@ -251,6 +251,17 @@ textarea:focus {
   font-size: 30px;
   color: white;
 }
+.errorCreated{
+  width: fit-content;
+  max-height: 100px;
+  height: fit-content;
+  text-align: start;
+  border-radius: 15px;
+  padding: 15px;
+  font-size: 30px;
+  color: white;
+  background-color: #fe010158;
+}
 
 .copy{
   background-color: #fff;
