@@ -42,6 +42,7 @@ const Decrypt = () => {
         ele.classList.add("errorCreated");
       }
       else{
+        ele.classList.add("created");
         ele.classList.remove("errorCreated");
       }
       ele.textContent = `${arr}`;
